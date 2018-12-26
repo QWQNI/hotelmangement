@@ -1,0 +1,44 @@
+﻿@model IEnumerable<hotlemangement.Models.roomtable>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>房间资产管理</h2>
+
+<p><a href="/roomtables/Create" class="btn btn-primary">添加 &raquo;</a></p>
+
+<table class="table">
+    <tr>
+        <th>
+            房间号
+        </th>
+        <th>
+            房间类型
+        </th>
+        <th>
+            房间机码
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Room)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phonenum)
+        </td>
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("详情", "Details", new { id=item.ID }) |
+            @Html.ActionLink("删除", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

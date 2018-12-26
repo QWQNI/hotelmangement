@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="gdModelStoreContainer" CdmEntityContainer="gdEntities">
+    <EntitySetMapping Name="roomtable">
+      <EntityTypeMapping TypeName="gdModel.roomtable">
+        <MappingFragment StoreEntitySet="roomtable">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Room" ColumnName="Room" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="phonenum" ColumnName="phonenum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="proce">
+      <EntityTypeMapping TypeName="gdModel.proce">
+        <MappingFragment StoreEntitySet="proce">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="room" ColumnName="room" />
+          <ScalarProperty Name="card" ColumnName="card" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staff">
+      <EntityTypeMapping TypeName="gdModel.staff">
+        <MappingFragment StoreEntitySet="staff">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="compartment" ColumnName="compartment" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
