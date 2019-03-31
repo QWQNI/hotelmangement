@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LHModelStoreContainer" CdmEntityContainer="LHEntities">
+    <EntitySetMapping Name="Rometype">
+      <EntityTypeMapping TypeName="LHModel.Rometype">
+        <MappingFragment StoreEntitySet="Rometype">
+          <ScalarProperty Name="IDX" ColumnName="IDX" />
+          <ScalarProperty Name="roomtype" ColumnName="roomtype" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="pnumber" ColumnName="pnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_room">
+      <EntityTypeMapping TypeName="LHModel.tb_room">
+        <MappingFragment StoreEntitySet="tb_room">
+          <ScalarProperty Name="isused" ColumnName="isused" />
+          <ScalarProperty Name="IDX" ColumnName="IDX" />
+          <ScalarProperty Name="roomID" ColumnName="roomID" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="ispriced" ColumnName="ispriced" />
+          <ScalarProperty Name="personID" ColumnName="personID" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_reserve">
+      <EntityTypeMapping TypeName="LHModel.tb_reserve">
+        <MappingFragment StoreEntitySet="tb_reserve">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="roomID" ColumnName="roomID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="cardID" ColumnName="cardID" />
+          <ScalarProperty Name="IDX" ColumnName="IDX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

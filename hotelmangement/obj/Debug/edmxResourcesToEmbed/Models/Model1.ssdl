@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Rometype">
+    <Key>
+      <PropertyRef Name="IDX" />
+    </Key>
+    <Property Name="IDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="roomtype" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="price" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pnumber" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_reserve">
+    <Key>
+      <PropertyRef Name="IDX" />
+    </Key>
+    <Property Name="IDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cardID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="roomID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="remark" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="tb_room">
+    <Key>
+      <PropertyRef Name="IDX" />
+    </Key>
+    <Property Name="IDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="roomID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="50" />
+    <Property Name="ispriced" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="personID" Type="varchar" MaxLength="50" />
+    <Property Name="remark" Type="varchar(max)" />
+    <Property Name="isused" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="LHModelStoreContainer">
+    <EntitySet Name="Rometype" EntityType="Self.Rometype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_reserve" EntityType="Self.tb_reserve" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_room" EntityType="Self.tb_room" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

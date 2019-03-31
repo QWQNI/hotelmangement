@@ -1,0 +1,60 @@
+﻿@model IEnumerable<hotelmangement.Models.tb_room>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Used Room</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.roomID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ispriced)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.personID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.remark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isused)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.roomID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ispriced)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.personID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.remark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isused)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IDX }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IDX }) |
+            </td>
+        </tr>
+    }
+
+</table>

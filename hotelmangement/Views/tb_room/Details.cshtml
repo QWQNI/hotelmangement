@@ -1,0 +1,73 @@
+﻿@model hotelmangement.Models.tb_room
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tb_room</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.roomID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.roomID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ispriced)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ispriced)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.personID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.remark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.remark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isused)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isused)
+        </dd>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Details" class="btn btn-default" /> |
+            </div>
+        }
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDX }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<hotelmangement.Models.Rometype>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.roomtype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pnumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.roomtype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pnumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDX }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDX }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDX })
+        </td>
+    </tr>
+}
+
+</table>
